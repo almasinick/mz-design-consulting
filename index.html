@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"EngineeringFirm","name":"M&Z Design Consulting LTD.","description":"Civil engineering consulting across Alberta and British Columbia","areaServed":["Alberta","British Columbia"]}</script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -24,7 +23,7 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--font-b);color:var(--gray-800);background:var(--white);line-height:1.65;overflow-x:hidden}
 
-/* ── NAV ── */
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:var(--tr)}
 nav.scrolled{background:rgba(7,26,46,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,168,173,.18)}
 nav.top{background:transparent}
@@ -42,25 +41,25 @@ nav.top{background:transparent}
 .hamburger{display:none;background:none;border:none;cursor:pointer;padding:.5rem}
 .hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;transition:var(--tr)}
 
-/* ── HERO SLIDESHOW ── */
+/* HERO */
 .hero{position:relative;height:100vh;min-height:680px;overflow:hidden;display:flex;align-items:center}
 .hero-slides{position:absolute;inset:0;z-index:0}
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;background-size:cover;background-position:center}
 .hero-slide.active{opacity:1}
-.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,26,46,.88) 0%,rgba(11,37,64,.72) 50%,rgba(0,80,85,.55) 100%)}
-/* Slide images via Unsplash */
-.slide-1{background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=85')}
-.slide-2{background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=85')}
-.slide-3{background-image:url('https://images.unsplash.com/photo-1581093806997-124204d9fa9d?w=1800&q=85')}
-.slide-4{background-image:url('https://images.unsplash.com/photo-1590650046871-92c887180603?w=1800&q=85')}
-.slide-5{background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=85')}
-.hero-slide-indicators{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.6rem;z-index:10}
+.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,26,46,.88) 0%,rgba(11,37,64,.72) 55%,rgba(0,70,75,.55) 100%)}
+/* Hero slides — earthworks, highways, industrial, stormwater, transportation */
+.slide-1{background-image:url('https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=1800&q=85')}
+.slide-2{background-image:url('https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1800&q=85')}
+.slide-3{background-image:url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1800&q=85')}
+.slide-4{background-image:url('https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=1800&q=85')}
+.slide-5{background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1800&q=85')}
+.hero-dot-bar{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;gap:.6rem;z-index:10}
 .hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);border:none;cursor:pointer;transition:var(--tr);padding:0}
 .hero-dot.active{background:var(--teal-light);width:28px;border-radius:4px}
-.hero-overlay-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(0,168,173,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,168,173,.06) 1px,transparent 1px);background-size:55px 55px}
+.hero-grid-overlay{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(0,168,173,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,168,173,.05) 1px,transparent 1px);background-size:55px 55px}
 .hero-content{position:relative;z-index:3;max-width:1320px;margin:0 auto;padding:0 2rem;width:100%;padding-top:72px}
 .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(0,134,138,.18);border:1px solid rgba(0,168,173,.35);color:var(--teal-light);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.4rem 1rem;border-radius:2px;margin-bottom:1.8rem;animation:fadeUp .8s ease both}
-.hero-badge-dot{width:7px;height:7px;background:var(--teal-light);border-radius:50%;animation:pulse 2s infinite}
+.hero-dot-pulse{width:7px;height:7px;background:var(--teal-light);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.85)}}
 .hero h1{font-family:var(--font-d);font-weight:900;font-size:clamp(3rem,6vw,6.2rem);color:#fff;line-height:.98;letter-spacing:-.01em;max-width:820px;margin-bottom:1.6rem;animation:fadeUp .8s .12s ease both}
 .hero h1 em{font-style:normal;color:var(--teal-light)}
@@ -76,14 +75,14 @@ nav.top{background:transparent}
 .hstat-label{font-size:11px;color:rgba(255,255,255,.48);text-transform:uppercase;letter-spacing:.1em;margin-top:.3rem}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── MARQUEE ── */
+/* MARQUEE */
 .marquee-strip{background:var(--navy-dark);padding:1rem 0;overflow:hidden;border-top:1px solid rgba(0,168,173,.15);border-bottom:1px solid rgba(0,168,173,.15)}
 .marquee-track{display:flex;width:max-content;animation:marquee 30s linear infinite}
 .marquee-item{font-family:var(--font-d);font-weight:600;font-size:12.5px;color:rgba(255,255,255,.42);letter-spacing:.14em;text-transform:uppercase;padding:0 2.5rem;display:flex;align-items:center;gap:2.5rem;white-space:nowrap}
 .marquee-item::after{content:'◆';color:var(--teal);font-size:7px}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section{padding:6rem 2rem}
 .container{max-width:1320px;margin:0 auto}
 .section-tag{display:inline-block;color:var(--teal);font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border-left:3px solid var(--teal);padding-left:.8rem;margin-bottom:1rem}
@@ -93,7 +92,7 @@ section{padding:6rem 2rem}
 .section-lead{font-size:1.05rem;color:var(--gray-600);max-width:620px;line-height:1.78}
 .section-lead.white{color:rgba(255,255,255,.7)}
 
-/* ── STATS COUNTER BAND ── */
+/* STATS BAND */
 .stats-band{background:var(--navy);padding:4.5rem 2rem}
 .stats-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
 .stat-block{text-align:center;border-right:1px solid rgba(255,255,255,.08)}
@@ -103,13 +102,13 @@ section{padding:6rem 2rem}
 .stat-label{font-size:12.5px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-top:.5rem}
 .stat-sub{font-size:11px;color:rgba(255,255,255,.3);margin-top:.25rem}
 
-/* ── ABOUT ── */
+/* ABOUT */
 .about-section{background:var(--offwhite)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
-.about-img-stack{position:relative}
+.about-img-stack{position:relative;padding-bottom:3rem;padding-right:3rem}
 .about-img-main{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;display:block}
-.about-img-accent{position:absolute;bottom:-2.5rem;right:-2.5rem;width:55%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;border:5px solid #fff;box-shadow:var(--shadow-lg)}
-.about-badge{position:absolute;top:2rem;left:-2rem;background:var(--teal);color:#fff;padding:1.25rem 1.75rem;border-radius:2px;box-shadow:var(--shadow)}
+.about-img-accent{position:absolute;bottom:0;right:0;width:55%;aspect-ratio:4/3;object-fit:cover;border-radius:3px;border:5px solid #fff;box-shadow:var(--shadow-lg)}
+.about-badge{position:absolute;top:2rem;left:-1.5rem;background:var(--teal);color:#fff;padding:1.25rem 1.75rem;border-radius:2px;box-shadow:var(--shadow);z-index:2}
 .about-badge-num{font-family:var(--font-d);font-weight:900;font-size:2.5rem;line-height:1}
 .about-badge-label{font-size:11px;opacity:.85;font-weight:500;margin-top:.2rem}
 .divider-teal{width:52px;height:4px;background:var(--teal);border-radius:2px;margin:1.5rem 0}
@@ -117,15 +116,15 @@ section{padding:6rem 2rem}
 .value-item{display:flex;align-items:flex-start;gap:.8rem;font-size:14.5px;color:var(--gray-600)}
 .vcheck{width:20px;height:20px;flex-shrink:0;background:var(--teal-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--teal);font-size:11px;font-weight:700;margin-top:2px}
 
-/* ── SERVICES ── */
+/* SERVICES */
 .services-section{background:#fff}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:1.5rem;margin-top:3.5rem}
 .scard{border-radius:3px;overflow:hidden;border:1px solid var(--gray-200);transition:var(--tr);cursor:pointer;background:#fff}
 .scard:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:transparent}
-.scard-img{height:200px;overflow:hidden;position:relative}
+.scard-img{height:210px;overflow:hidden;position:relative}
 .scard-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .scard:hover .scard-img img{transform:scale(1.05)}
-.scard-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,37,64,.7) 100%)}
+.scard-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,37,64,.65) 100%)}
 .scard-cat{position:absolute;top:1rem;left:1rem;background:var(--teal);color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .7rem;border-radius:2px}
 .scard-body{padding:1.6rem}
 .scard-name{font-family:var(--font-d);font-weight:800;font-size:1.2rem;color:var(--navy);margin-bottom:.6rem}
@@ -134,39 +133,39 @@ section{padding:6rem 2rem}
 .scard-bullets li{font-size:12.5px;color:var(--gray-600);display:flex;align-items:center;gap:.5rem}
 .scard-bullets li::before{content:'—';color:var(--teal);font-weight:700;font-size:11px}
 
-/* ── PARALLAX BAND ── */
-.parallax-band{position:relative;height:420px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.parallax-bg{position:absolute;inset:-60px 0;background-attachment:fixed;background-size:cover;background-position:center;z-index:0}
-.parallax-bg::after{content:'';position:absolute;inset:0;background:rgba(7,26,46,.78)}
-.parallax-content{position:relative;z-index:1;text-align:center;padding:2rem}
+/* PARALLAX */
+.parallax-band{position:relative;height:440px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.parallax-bg{position:absolute;inset:-80px 0;background-attachment:fixed;background-size:cover;background-position:center;z-index:0}
+.parallax-bg::after{content:'';position:absolute;inset:0;background:rgba(7,26,46,.8)}
+.parallax-content{position:relative;z-index:1;text-align:center;padding:2rem;max-width:800px}
 
-/* ── PROJECTS MASONRY ── */
+/* PROJECTS MASONRY */
 .projects-section{background:var(--offwhite)}
 .proj-filters{display:flex;gap:.5rem;flex-wrap:wrap;margin:2.5rem 0}
 .pfbtn{padding:.5rem 1.25rem;border-radius:2px;font-size:12.5px;font-weight:600;letter-spacing:.05em;border:1.5px solid var(--gray-200);background:#fff;color:var(--gray-600);cursor:pointer;transition:var(--tr)}
 .pfbtn:hover,.pfbtn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.masonry{columns:3;gap:1.25rem;margin-top:0}
-.masonry-item{break-inside:avoid;margin-bottom:1.25rem;position:relative;overflow:hidden;border-radius:3px;cursor:pointer}
+.masonry{columns:3;gap:1.25rem}
+.masonry-item{break-inside:avoid;margin-bottom:1.25rem;position:relative;overflow:hidden;border-radius:3px;cursor:pointer;display:block}
 .masonry-item img{width:100%;display:block;transition:transform .6s ease}
 .masonry-item:hover img{transform:scale(1.04)}
-.masonry-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(7,26,46,.9) 100%);opacity:0;transition:opacity .35s ease;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
+.masonry-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(7,26,46,.92) 100%);opacity:0;transition:opacity .35s ease;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
 .masonry-item:hover .masonry-overlay{opacity:1}
-.masonry-proj-cat{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);margin-bottom:.35rem}
-.masonry-proj-name{font-family:var(--font-d);font-weight:800;font-size:1.1rem;color:#fff;margin-bottom:.25rem}
-.masonry-proj-loc{font-size:12px;color:rgba(255,255,255,.65)}
+.m-cat{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-light);margin-bottom:.35rem}
+.m-name{font-family:var(--font-d);font-weight:800;font-size:1.1rem;color:#fff;margin-bottom:.25rem}
+.m-loc{font-size:12px;color:rgba(255,255,255,.65)}
 
-/* ── INDUSTRIES ── */
+/* INDUSTRIES */
 .industries-section{background:var(--navy)}
 .ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.25rem;margin-top:3.5rem}
 .ind-card{border-radius:3px;overflow:hidden;position:relative;cursor:pointer;aspect-ratio:4/3}
 .ind-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .ind-card:hover img{transform:scale(1.06)}
-.ind-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,46,.2) 0%,rgba(7,26,46,.85) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;transition:background .35s}
-.ind-card:hover .ind-overlay{background:linear-gradient(180deg,rgba(0,134,138,.25) 0%,rgba(7,26,46,.92) 100%)}
+.ind-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,46,.15) 0%,rgba(7,26,46,.88) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;transition:background .35s}
+.ind-card:hover .ind-overlay{background:linear-gradient(180deg,rgba(0,134,138,.2) 0%,rgba(7,26,46,.93) 100%)}
 .ind-name{font-family:var(--font-d);font-weight:800;font-size:1.1rem;color:#fff;margin-bottom:.3rem}
 .ind-desc{font-size:11.5px;color:rgba(255,255,255,.6);line-height:1.6}
 
-/* ── COVERAGE MAP ── */
+/* COVERAGE MAP */
 .coverage-section{background:#fff}
 .coverage-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3.5rem}
 .map-wrap{background:var(--offwhite);border:1px solid var(--gray-200);border-radius:3px;padding:2rem;min-height:420px;display:flex;align-items:center;justify-content:center}
@@ -178,18 +177,18 @@ section{padding:6rem 2rem}
 .city-pill.ab{background:var(--navy)}
 .city-pill.bc{background:var(--teal)}
 
-/* ── PROCESS ── */
+/* PROCESS */
 .process-section{background:var(--navy-mid);padding:5.5rem 2rem}
 .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:3.5rem;position:relative}
 .process-steps::before{content:'';position:absolute;top:38px;left:12.5%;right:12.5%;height:2px;background:linear-gradient(90deg,transparent,var(--teal),transparent);z-index:0}
 .pstep{text-align:center;padding:0 1.5rem;position:relative;z-index:1}
 .pstep-num{font-family:var(--font-d);font-weight:900;font-size:3rem;color:rgba(255,255,255,.07);line-height:1}
-.pstep-icon{width:64px;height:64px;margin:-.8rem auto 1.2rem;background:var(--navy);border-radius:50%;border:2px solid rgba(0,168,173,.4);display:flex;align-items:center;justify-content:center;position:relative}
+.pstep-icon{width:64px;height:64px;margin:-.8rem auto 1.2rem;background:var(--navy);border-radius:50%;border:2px solid rgba(0,168,173,.4);display:flex;align-items:center;justify-content:center}
 .pstep-icon svg{width:28px;height:28px;color:var(--teal-light);fill:none;stroke:currentColor;stroke-width:1.8}
 .pstep-title{font-family:var(--font-d);font-weight:800;font-size:1.05rem;color:#fff;margin-bottom:.5rem}
 .pstep-desc{font-size:13px;color:rgba(255,255,255,.48);line-height:1.65}
 
-/* ── CAREERS ── */
+/* CAREERS */
 .careers-section{background:var(--navy)}
 .careers-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
@@ -202,7 +201,7 @@ section{padding:6rem 2rem}
 .opening:hover{background:rgba(0,134,138,.15);border-color:rgba(0,168,173,.3)}
 .opening-title{font-weight:600;color:#fff;font-size:14.5px}
 .opening-meta{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:.15rem}
-.opening-arr{color:var(--teal-light);font-size:1.1rem}
+.opening-arr{color:var(--teal-light)}
 .form-wrap{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:3px;padding:2.25rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-group{display:flex;flex-direction:column;gap:.38rem;margin-bottom:.75rem}
@@ -215,14 +214,14 @@ section{padding:6rem 2rem}
 .finput.dk:focus{border-color:var(--teal);background:#fff}
 .finput.dk::placeholder{color:var(--gray-400)}
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-section{background:var(--offwhite)}
 .contact-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:5rem;align-items:start}
 .contact-info-label{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:.4rem}
 .contact-info-val{font-size:14.5px;color:var(--gray-600);margin-bottom:1.75rem}
 .cform{background:#fff;border:1px solid var(--gray-200);border-radius:3px;padding:2.5rem}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padding:4.5rem 2rem 2rem}
 .footer-inner{max-width:1320px;margin:0 auto}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3.5rem;margin-bottom:3rem}
@@ -237,24 +236,27 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
 .social-link{width:36px;height:36px;border-radius:2px;border:1px solid rgba(255,255,255,.14);display:inline-flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);text-decoration:none;transition:var(--tr)}
 .social-link:hover{border-color:var(--teal);color:var(--teal-light)}
 
-/* ── PAGE SECTIONS ── */
+/* PAGE SECTIONS */
 .page-section{display:none}
 .page-section.active{display:block}
 #home{display:block}
 
-/* ── REVEAL ── */
+/* REVEAL */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-d1{transition-delay:.1s}
 .reveal-d2{transition-delay:.2s}
 .reveal-d3{transition-delay:.3s}
 
-/* ── GLASS CTA ── */
-.glass-cta{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:4px;padding:2.5rem;text-align:center}
+/* PAGE HERO BANNERS */
+.page-hero{position:relative;height:420px;overflow:hidden}
+.page-hero img{width:100%;height:100%;object-fit:cover}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,26,46,.92),rgba(11,37,64,.75))}
+.page-hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 2rem;max-width:1320px;margin:0 auto;left:0;right:0}
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media(max-width:1024px){.masonry{columns:2}.about-grid,.coverage-grid,.careers-inner,.contact-inner{grid-template-columns:1fr}.about-img-accent{display:none}.about-badge{left:0}.stats-grid{grid-template-columns:repeat(2,1fr)}.process-steps{grid-template-columns:repeat(2,1fr)}.process-steps::before{display:none}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){.nav-links{display:none}.hamburger{display:block}.masonry{columns:1}.hero h1{font-size:2.8rem}.stats-grid{grid-template-columns:repeat(2,1fr)}.process-steps{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.ind-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}section{padding:4rem 1.25rem}}
+@media(max-width:640px){.nav-links{display:none}.hamburger{display:block}.masonry{columns:1}.hero h1{font-size:2.8rem}.stats-grid{grid-template-columns:repeat(2,1fr)}.process-steps{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.ind-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}section{padding:4rem 1.25rem}.page-hero{height:300px}}
 </style>
 </head>
 <body>
@@ -279,21 +281,26 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
   </div>
 </nav>
 
-<!-- ════════════════════════════════ HOME ════════════════════════════════ -->
+<!-- ══════════════ HOME ══════════════ -->
 <div id="home" class="page-section active">
 
-<!-- HERO SLIDESHOW -->
+<!-- HERO: Aerial highway interchange / large earthworks / industrial -->
 <section class="hero">
   <div class="hero-slides">
+    <!-- Aerial highway interchange -->
     <div class="hero-slide slide-1 active"></div>
+    <!-- Large earthwork / excavation operation -->
     <div class="hero-slide slide-2"></div>
+    <!-- Highway construction corridor -->
     <div class="hero-slide slide-3"></div>
+    <!-- Industrial infrastructure / energy sector -->
     <div class="hero-slide slide-4"></div>
+    <!-- Road / transportation engineering -->
     <div class="hero-slide slide-5"></div>
   </div>
-  <div class="hero-overlay-grid"></div>
+  <div class="hero-grid-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge"><span class="hero-badge-dot"></span>Alberta &amp; British Columbia, Canada</div>
+    <div class="hero-badge"><span class="hero-dot-pulse"></span>Alberta &amp; British Columbia, Canada</div>
     <h1>Engineering Solutions<br>That Build <em>Strong<br>Foundations</em></h1>
     <p class="hero-sub">Providing civil engineering design, site development, stormwater management, transportation engineering, and construction support across Western Canada.</p>
     <div class="hero-actions">
@@ -306,11 +313,11 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
     <div class="hero-stats">
       <div><div class="hstat-num" data-count="100" data-suffix="+">0+</div><div class="hstat-label">Projects Completed</div></div>
       <div><div class="hstat-num" data-count="25" data-suffix="+">0+</div><div class="hstat-label">Years Combined Experience</div></div>
-      <div><div class="hstat-num">2</div><div class="hstat-label">Provinces Served</div></div>
-      <div><div class="hstat-num" data-count="50" data-suffix="M+">0M+</div><div class="hstat-label">m³ Earthwork Designed</div></div>
+      <div><div class="hstat-num">AB<span>+</span>BC</div><div class="hstat-label">Provinces Served</div></div>
+      <div><div class="hstat-num" data-count="50" data-suffix="M+">0</div><div class="hstat-label">m³ Earthwork Designed</div></div>
     </div>
   </div>
-  <div class="hero-slide-indicators" id="slideIndicators"></div>
+  <div class="hero-dot-bar" id="slideIndicators"></div>
 </section>
 
 <!-- MARQUEE -->
@@ -321,8 +328,14 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
   <div class="container">
     <div class="about-grid">
       <div class="about-img-stack reveal">
-        <img class="about-img-main" src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=85" alt="Civil engineers reviewing construction plans on site" loading="lazy">
-        <img class="about-img-accent" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=85" alt="Large earthwork and grading operation" loading="lazy">
+        <!-- Engineers reviewing drawings on site / surveying equipment -->
+        <img class="about-img-main"
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=85"
+          alt="Large earthwork and mass grading construction operation" loading="lazy">
+        <!-- Drone survey / site inspection -->
+        <img class="about-img-accent"
+          src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=85"
+          alt="Civil engineering site construction and grading" loading="lazy">
         <div class="about-badge"><div class="about-badge-num">AB+BC</div><div class="about-badge-label">Western Canada</div></div>
       </div>
       <div class="reveal reveal-d1">
@@ -363,69 +376,130 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
       <a href="#" class="btn-primary" onclick="showSection('services');return false">All Services →</a>
     </div>
     <div class="services-grid">
+
+      <!-- Site Grading: excavators, bulldozers, mass earthworks -->
       <div class="scard reveal">
-        <div class="scard-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Site grading and earthwork" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Earthworks</div></div>
-        <div class="scard-body"><div class="scard-name">Site Grading & Earthwork</div><div class="scard-desc">Precision grading design and earthwork optimization — cut/fill balancing, mass haul planning, and terrain analysis for industrial and commercial sites.</div><ul class="scard-bullets"><li>Existing terrain assessment</li><li>Finished grade design & mass haul</li><li>Cut/fill volume optimization</li></ul></div>
+        <div class="scard-img">
+          <img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=700&q=80"
+            alt="Excavator and bulldozer mass earthwork grading operation" loading="lazy">
+          <div class="scard-img-overlay"></div><div class="scard-cat">Earthworks</div>
+        </div>
+        <div class="scard-body">
+          <div class="scard-name">Site Grading & Earthwork</div>
+          <div class="scard-desc">Mass grading operations, cut and fill optimization, mass haul planning, and terrain analysis using real construction equipment and precision engineering.</div>
+          <ul class="scard-bullets"><li>Terrain assessment & finished grade design</li><li>Cut/fill volume optimization</li><li>Mass haul & earthwork balancing</li></ul>
+        </div>
       </div>
+
+      <!-- Stormwater: detention ponds, drainage, outlet structures -->
       <div class="scard reveal reveal-d1">
-        <div class="scard-img"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=700&q=80" alt="Stormwater management pond" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Stormwater</div></div>
-        <div class="scard-body"><div class="scard-name">Stormwater Engineering</div><div class="scard-desc">Hydrologic and hydraulic modeling, SWM pond design, detention and retention systems, and full erosion and sediment control planning.</div><ul class="scard-bullets"><li>Hydrologic & hydraulic modeling</li><li>SWM pond & outlet design</li><li>ESC plans & sediment controls</li></ul></div>
+        <div class="scard-img">
+          <img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=700&q=80"
+            alt="Stormwater management detention pond with outlet structure" loading="lazy">
+          <div class="scard-img-overlay"></div><div class="scard-cat">Stormwater</div>
+        </div>
+        <div class="scard-body">
+          <div class="scard-name">Stormwater Engineering</div>
+          <div class="scard-desc">Hydrologic and hydraulic modeling, SWM pond and detention facility design, drainage systems, and comprehensive erosion and sediment control.</div>
+          <ul class="scard-bullets"><li>Hydrologic & hydraulic modeling</li><li>SWM pond, outlet & spillway design</li><li>ESC plans & sediment pond design</li></ul>
+        </div>
       </div>
+
+      <!-- Transportation: highway, interchange, road construction -->
       <div class="scard reveal reveal-d2">
-        <div class="scard-img"><img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=700&q=80" alt="Highway transportation engineering" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Transportation</div></div>
-        <div class="scard-body"><div class="scard-name">Transportation Engineering</div><div class="scard-desc">Road and highway design from industrial access roads to complex interchange geometry, drainage, and corridor development.</div><ul class="scard-bullets"><li>Industrial & municipal road design</li><li>Highway geometric & intersection design</li><li>Culverts & drainage systems</li></ul></div>
+        <div class="scard-img">
+          <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=700&q=80"
+            alt="Multi-lane highway interchange and transportation corridor" loading="lazy">
+          <div class="scard-img-overlay"></div><div class="scard-cat">Transportation</div>
+        </div>
+        <div class="scard-body">
+          <div class="scard-name">Transportation Engineering</div>
+          <div class="scard-desc">Highway geometric design, road construction engineering, interchange design, access roads, and transportation corridor development.</div>
+          <ul class="scard-bullets"><li>Highway & interchange geometric design</li><li>Industrial & municipal road design</li><li>Culverts, drainage & corridor development</li></ul>
+        </div>
       </div>
+
+      <!-- Industrial: energy infrastructure, compressor stations, tank farms -->
       <div class="scard reveal">
-        <div class="scard-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Industrial site development" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Industrial</div></div>
-        <div class="scard-body"><div class="scard-name">Industrial Site Development</div><div class="scard-desc">Full civil site design for energy facilities, compressor stations, LNG infrastructure, and industrial processing facilities.</div><ul class="scard-bullets"><li>Facility pad & site grading</li><li>Containment system design</li><li>Access roads & utility servicing</li></ul></div>
+        <div class="scard-img">
+          <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=700&q=80"
+            alt="Industrial energy infrastructure and compressor station facility" loading="lazy">
+          <div class="scard-img-overlay"></div><div class="scard-cat">Industrial</div>
+        </div>
+        <div class="scard-body">
+          <div class="scard-name">Industrial Site Development</div>
+          <div class="scard-desc">Civil site design for LNG facilities, compressor stations, meter stations, tank farms, and industrial processing plants in Alberta and BC.</div>
+          <ul class="scard-bullets"><li>Facility pad & site grading design</li><li>Secondary containment systems</li><li>Access roads & utility servicing</li></ul>
+        </div>
       </div>
+
+      <!-- Feasibility / site development -->
       <div class="scard reveal reveal-d1">
-        <div class="scard-img"><img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?w=700&q=80" alt="Feasibility study and engineering design" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Planning</div></div>
-        <div class="scard-body"><div class="scard-name">Feasibility Studies</div><div class="scard-desc">Site evaluations, preliminary engineering assessments, development constraints analysis, and risk assessments for sound project decisions.</div><ul class="scard-bullets"><li>Development constraints analysis</li><li>Risk & alternatives assessment</li><li>Conceptual engineering</li></ul></div>
+        <div class="scard-img">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=80"
+            alt="Large civil construction site development and infrastructure" loading="lazy">
+          <div class="scard-img-overlay"></div><div class="scard-cat">Planning</div>
+        </div>
+        <div class="scard-body">
+          <div class="scard-name">Feasibility Studies & Site Development</div>
+          <div class="scard-desc">Site evaluations, preliminary engineering assessments, development constraints analysis, site layout planning, and servicing design.</div>
+          <ul class="scard-bullets"><li>Development constraints & risk analysis</li><li>Site layout & servicing design</li><li>Conceptual engineering & alternatives</li></ul>
+        </div>
       </div>
+
+      <!-- Tank containment / regulatory -->
       <div class="scard reveal reveal-d2">
-        <div class="scard-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="Tank containment and regulatory compliance" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Regulatory</div></div>
-        <div class="scard-body"><div class="scard-name">Tank Containment & Compliance</div><div class="scard-desc">Secondary containment design, industrial containment berms, spill containment systems, and full regulatory compliance reviews for AB and BC.</div><ul class="scard-bullets"><li>Secondary containment design</li><li>Volume capacity calculations</li><li>AB & BC regulatory compliance</li></ul></div>
+        <div class="scard-img">
+          <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=700&q=80"
+            alt="Tank farm and industrial storage containment facility" loading="lazy">
+          <div class="scard-img-overlay"></div><div class="scard-cat">Regulatory</div>
+        </div>
+        <div class="scard-body">
+          <div class="scard-name">Tank Containment & Compliance</div>
+          <div class="scard-desc">Secondary containment berm design, spill containment systems, volume capacity calculations, and full AB/BC regulatory compliance reviews.</div>
+          <ul class="scard-bullets"><li>Secondary containment berm design</li><li>Volume capacity calculations</li><li>Alberta & BC regulatory compliance</li></ul>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- PARALLAX BAND 1 -->
+<!-- PARALLAX: Major highway/infrastructure aerial -->
 <div class="parallax-band">
-  <div class="parallax-bg" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80')"></div>
+  <div class="parallax-bg" style="background-image:url('https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1800&q=80')"></div>
   <div class="parallax-content">
     <div class="section-tag light" style="margin-bottom:1.2rem">Our Commitment</div>
-    <h2 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2rem,4vw,3.5rem);color:#fff;line-height:1;margin-bottom:1.2rem;max-width:700px;margin-left:auto;margin-right:auto">Delivering Engineering<br>Excellence Across<br><span style="color:var(--teal-light)">Western Canada</span></h2>
-    <p style="font-size:15px;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 2rem;line-height:1.75">From initial feasibility through detailed design and construction support — M&Z brings technical precision and practical experience to every project.</p>
+    <h2 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2rem,4vw,3.5rem);color:#fff;line-height:1.0;margin-bottom:1.2rem">Delivering Engineering<br>Excellence Across<br><span style="color:var(--teal-light)">Western Canada</span></h2>
+    <p style="font-size:15px;color:rgba(255,255,255,.72);max-width:520px;margin:0 auto 2rem;line-height:1.75">From initial feasibility through detailed design and construction support — M&Z brings technical precision and practical site experience to every project.</p>
     <a href="#" class="btn-primary" onclick="showSection('contact');return false">Start Your Project →</a>
   </div>
 </div>
 
-<!-- PROCESS SECTION -->
+<!-- PROCESS -->
 <section class="process-section">
   <div class="container">
-    <div style="text-align:center;margin-bottom:0">
-      <div class="section-tag light" style="margin-bottom:.8rem">How We Work</div>
+    <div style="text-align:center">
+      <div class="section-tag light">How We Work</div>
       <h2 class="section-title white">From Concept to Completion</h2>
     </div>
     <div class="process-steps reveal">
-      <div class="pstep"><div class="pstep-num">01</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><div class="pstep-title">Feasibility & Assessment</div><div class="pstep-desc">Site evaluation, risk analysis, development constraints, and conceptual alternatives.</div></div>
-      <div class="pstep"><div class="pstep-num">02</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div><div class="pstep-title">Detailed Design</div><div class="pstep-desc">IFC/IFA construction drawings, specifications, calculations, and tender packages.</div></div>
-      <div class="pstep"><div class="pstep-num">03</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="pstep-title">Regulatory Approvals</div><div class="pstep-desc">Municipal and provincial submissions, compliance reviews, and permit coordination.</div></div>
-      <div class="pstep"><div class="pstep-num">04</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="pstep-title">Construction Support</div><div class="pstep-desc">Site inspections, RFI responses, contractor support, and project completion.</div></div>
+      <div class="pstep"><div class="pstep-num">01</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><div class="pstep-title">Feasibility & Assessment</div><div class="pstep-desc">Site evaluation, constraints analysis, risk assessment, and conceptual alternatives development.</div></div>
+      <div class="pstep"><div class="pstep-num">02</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg></div><div class="pstep-title">Detailed Design</div><div class="pstep-desc">IFC/IFA construction drawings, civil calculations, specifications, and tender package preparation.</div></div>
+      <div class="pstep"><div class="pstep-num">03</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="pstep-title">Regulatory Approvals</div><div class="pstep-desc">Municipal and provincial submissions, compliance reviews, and permit coordination in AB and BC.</div></div>
+      <div class="pstep"><div class="pstep-num">04</div><div class="pstep-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><div class="pstep-title">Construction Support</div><div class="pstep-desc">Site inspections, RFI responses, contractor support, and project completion documentation.</div></div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS PREVIEW MASONRY -->
+<!-- PROJECTS PREVIEW -->
 <section class="projects-section">
   <div class="container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:1rem">
       <div><div class="section-tag">Portfolio</div><h2 class="section-title" style="margin-bottom:0">Representative Projects</h2></div>
       <a href="#" class="btn-primary" onclick="showSection('projects');return false">View All Projects →</a>
     </div>
-    <div class="proj-filters" id="homeFilters">
+    <div class="proj-filters">
       <button class="pfbtn active" onclick="filterMasonry('all',this,'homeMasonry')">All</button>
       <button class="pfbtn" onclick="filterMasonry('site',this,'homeMasonry')">Site Development</button>
       <button class="pfbtn" onclick="filterMasonry('stormwater',this,'homeMasonry')">Stormwater</button>
@@ -434,17 +508,41 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
       <button class="pfbtn" onclick="filterMasonry('earthworks',this,'homeMasonry')">Earthworks</button>
     </div>
     <div class="masonry" id="homeMasonry">
-      <div class="masonry-item" data-cat="highway"><img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=600&q=80" alt="Highway interchange design" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Highway Engineering</div><div class="masonry-proj-name">Rural Highway Widening</div><div class="masonry-proj-loc">📍 Red Deer County, AB</div></div></div>
-      <div class="masonry-item" data-cat="industrial"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Industrial compressor station" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Industrial Facilities</div><div class="masonry-proj-name">Compressor Station Civil Design</div><div class="masonry-proj-loc">📍 Fort McMurray, AB</div></div></div>
-      <div class="masonry-item" data-cat="stormwater"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=80" alt="Stormwater management pond" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Stormwater Management</div><div class="masonry-proj-name">SWM Pond — Commercial Site</div><div class="masonry-proj-loc">📍 Calgary, AB</div></div></div>
-      <div class="masonry-item" data-cat="earthworks"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Large earthwork grading operation" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Earthworks</div><div class="masonry-proj-name">Subdivision Cut/Fill Optimization</div><div class="masonry-proj-loc">📍 Kelowna, BC</div></div></div>
-      <div class="masonry-item" data-cat="site"><img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?w=600&q=80" alt="Industrial park site development" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Site Development</div><div class="masonry-proj-name">Industrial Park Site Servicing</div><div class="masonry-proj-loc">📍 Grande Prairie, AB</div></div></div>
-      <div class="masonry-item" data-cat="highway"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Transportation corridor" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Transportation</div><div class="masonry-proj-name">Access Road — Energy Facility</div><div class="masonry-proj-loc">📍 Edmonton Region, AB</div></div></div>
+      <!-- Highway interchange -->
+      <div class="masonry-item" data-cat="highway">
+        <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&q=82" alt="Highway interchange geometric design Alberta" loading="lazy">
+        <div class="masonry-overlay"><div class="m-cat">Highway Engineering</div><div class="m-name">Rural Highway Widening</div><div class="m-loc">📍 Red Deer County, AB</div></div>
+      </div>
+      <!-- Industrial energy infrastructure -->
+      <div class="masonry-item" data-cat="industrial">
+        <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&q=82" alt="Compressor station industrial civil design Fort McMurray" loading="lazy">
+        <div class="masonry-overlay"><div class="m-cat">Industrial Facilities</div><div class="m-name">Compressor Station Civil Design</div><div class="m-loc">📍 Fort McMurray, AB</div></div>
+      </div>
+      <!-- Stormwater pond -->
+      <div class="masonry-item" data-cat="stormwater">
+        <img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=82" alt="Stormwater management detention pond Calgary" loading="lazy">
+        <div class="masonry-overlay"><div class="m-cat">Stormwater Management</div><div class="m-name">SWM Pond — Commercial Site</div><div class="m-loc">📍 Calgary, AB</div></div>
+      </div>
+      <!-- Earthworks / mass grading -->
+      <div class="masonry-item" data-cat="earthworks">
+        <img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=600&q=82" alt="Mass earthwork grading operation Kelowna BC" loading="lazy">
+        <div class="masonry-overlay"><div class="m-cat">Earthworks</div><div class="m-name">Subdivision Cut/Fill Optimization</div><div class="m-loc">📍 Kelowna, BC</div></div>
+      </div>
+      <!-- Site development / construction -->
+      <div class="masonry-item" data-cat="site">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=82" alt="Industrial park site development Grande Prairie" loading="lazy">
+        <div class="masonry-overlay"><div class="m-cat">Site Development</div><div class="m-name">Industrial Park Site Servicing</div><div class="m-loc">📍 Grande Prairie, AB</div></div>
+      </div>
+      <!-- Road / transportation -->
+      <div class="masonry-item" data-cat="highway">
+        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=82" alt="Industrial access road energy corridor Alberta" loading="lazy">
+        <div class="masonry-overlay"><div class="m-cat">Transportation Infrastructure</div><div class="m-name">Access Road — Energy Facility</div><div class="m-loc">📍 Edmonton Region, AB</div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- COVERAGE -->
+<!-- COVERAGE MAP -->
 <section class="coverage-section">
   <div class="container">
     <div class="section-tag">Geographic Coverage</div>
@@ -452,49 +550,29 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
     <div class="coverage-grid">
       <div class="map-wrap reveal">
         <svg viewBox="0 0 460 520" xmlns="http://www.w3.org/2000/svg">
-          <defs><filter id="glow"><feGaussianBlur stdDeviation="2" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-          <!-- BC -->
-          <path d="M80 55 L135 35 L178 48 L205 82 L222 125 L212 165 L224 205 L204 248 L192 290 L180 332 L168 375 L155 412 L95 428 L72 388 L55 345 L48 302 L68 260 L57 218 L68 175 L55 132 L68 95Z" fill="rgba(0,134,138,.07)" stroke="rgba(0,134,138,.5)" stroke-width="1.5"/>
-          <!-- AB -->
-          <path d="M224 125 L308 114 L378 120 L390 166 L398 208 L393 250 L399 292 L392 335 L386 375 L374 412 L282 418 L200 412 L188 372 L200 330 L212 290 L224 248 L212 205 L224 165Z" fill="rgba(11,37,64,.07)" stroke="rgba(11,37,64,.4)" stroke-width="1.5"/>
-          <!-- Labels -->
-          <text x="130" y="230" text-anchor="middle" fill="rgba(0,134,138,.8)" font-size="16" font-weight="700" font-family="sans-serif" letter-spacing="1">BC</text>
-          <text x="295" y="275" text-anchor="middle" fill="rgba(11,37,64,.8)" font-size="16" font-weight="700" font-family="sans-serif" letter-spacing="1">AB</text>
-          <!-- AB cities -->
-          <circle cx="298" cy="355" r="7" fill="#0B2540" filter="url(#glow)"/>
-          <text x="312" y="360" fill="#0B2540" font-size="11" font-family="sans-serif" font-weight="700">Calgary</text>
-          <circle cx="298" cy="218" r="7" fill="#0B2540" filter="url(#glow)"/>
-          <text x="312" y="223" fill="#0B2540" font-size="11" font-family="sans-serif" font-weight="700">Edmonton</text>
-          <circle cx="258" cy="152" r="5" fill="#143259"/>
-          <text x="268" y="157" fill="#4A5568" font-size="10" font-family="sans-serif">Grande Prairie</text>
-          <circle cx="298" cy="288" r="5" fill="#143259"/>
-          <text x="308" y="292" fill="#4A5568" font-size="10" font-family="sans-serif">Red Deer</text>
-          <circle cx="348" cy="162" r="5" fill="#143259"/>
-          <text x="356" y="166" fill="#4A5568" font-size="10" font-family="sans-serif">Ft McMurray</text>
-          <circle cx="292" cy="392" r="5" fill="#143259"/>
-          <text x="302" y="396" fill="#4A5568" font-size="10" font-family="sans-serif">Lethbridge</text>
-          <!-- BC cities -->
-          <circle cx="102" cy="382" r="7" fill="#00868A" filter="url(#glow)"/>
-          <text x="115" y="387" fill="#00686C" font-size="11" font-family="sans-serif" font-weight="700">Vancouver</text>
-          <circle cx="106" cy="366" r="4" fill="#00868A"/>
-          <text x="116" y="370" fill="#4A5568" font-size="10" font-family="sans-serif">Surrey/Burnaby</text>
-          <circle cx="148" cy="318" r="4" fill="#00868A"/>
-          <text x="158" y="322" fill="#4A5568" font-size="10" font-family="sans-serif">Kelowna</text>
-          <circle cx="132" cy="285" r="4" fill="#00868A"/>
-          <text x="142" y="289" fill="#4A5568" font-size="10" font-family="sans-serif">Kamloops</text>
-          <circle cx="118" cy="185" r="4" fill="#00868A"/>
-          <text x="128" y="189" fill="#4A5568" font-size="10" font-family="sans-serif">Prince George</text>
-          <circle cx="88" cy="400" r="4" fill="#00868A"/>
-          <text x="74" y="417" fill="#4A5568" font-size="9.5" font-family="sans-serif">Victoria</text>
-          <!-- Legend -->
-          <circle cx="65" cy="462" r="5" fill="#0B2540"/>
-          <text x="76" y="466" fill="#4A5568" font-size="11" font-family="sans-serif">Alberta</text>
-          <circle cx="165" cy="462" r="5" fill="#00868A"/>
-          <text x="176" y="466" fill="#4A5568" font-size="11" font-family="sans-serif">British Columbia</text>
+          <defs><filter id="glow"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <path d="M80 55 L135 35 L178 48 L205 82 L222 125 L212 165 L224 205 L204 248 L192 290 L180 332 L168 375 L155 412 L95 428 L72 388 L55 345 L48 302 L68 260 L57 218 L68 175 L55 132 L68 95Z" fill="rgba(0,134,138,.08)" stroke="rgba(0,134,138,.5)" stroke-width="1.5"/>
+          <path d="M224 125 L308 114 L378 120 L390 166 L398 208 L393 250 L399 292 L392 335 L386 375 L374 412 L282 418 L200 412 L188 372 L200 330 L212 290 L224 248 L212 205 L224 165Z" fill="rgba(11,37,64,.08)" stroke="rgba(11,37,64,.4)" stroke-width="1.5"/>
+          <text x="130" y="230" text-anchor="middle" fill="rgba(0,134,138,.9)" font-size="15" font-weight="700" font-family="sans-serif" letter-spacing="1">BC</text>
+          <text x="295" y="275" text-anchor="middle" fill="rgba(11,37,64,.9)" font-size="15" font-weight="700" font-family="sans-serif" letter-spacing="1">AB</text>
+          <circle cx="298" cy="355" r="7" fill="#0B2540" filter="url(#glow)"/><text x="312" y="360" fill="#0B2540" font-size="11" font-family="sans-serif" font-weight="700">Calgary</text>
+          <circle cx="298" cy="218" r="7" fill="#0B2540" filter="url(#glow)"/><text x="312" y="223" fill="#0B2540" font-size="11" font-family="sans-serif" font-weight="700">Edmonton</text>
+          <circle cx="258" cy="152" r="5" fill="#143259"/><text x="268" y="157" fill="#4A5568" font-size="10" font-family="sans-serif">Grande Prairie</text>
+          <circle cx="298" cy="288" r="5" fill="#143259"/><text x="308" y="292" fill="#4A5568" font-size="10" font-family="sans-serif">Red Deer</text>
+          <circle cx="348" cy="162" r="5" fill="#143259"/><text x="356" y="166" fill="#4A5568" font-size="10" font-family="sans-serif">Ft McMurray</text>
+          <circle cx="292" cy="392" r="5" fill="#143259"/><text x="302" y="396" fill="#4A5568" font-size="10" font-family="sans-serif">Lethbridge</text>
+          <circle cx="102" cy="382" r="7" fill="#00868A" filter="url(#glow)"/><text x="115" y="387" fill="#00686C" font-size="11" font-family="sans-serif" font-weight="700">Vancouver</text>
+          <circle cx="106" cy="366" r="4" fill="#00868A"/><text x="116" y="370" fill="#4A5568" font-size="10" font-family="sans-serif">Surrey / Burnaby</text>
+          <circle cx="148" cy="318" r="4" fill="#00868A"/><text x="158" y="322" fill="#4A5568" font-size="10" font-family="sans-serif">Kelowna</text>
+          <circle cx="132" cy="285" r="4" fill="#00868A"/><text x="142" y="289" fill="#4A5568" font-size="10" font-family="sans-serif">Kamloops</text>
+          <circle cx="118" cy="185" r="4" fill="#00868A"/><text x="128" y="189" fill="#4A5568" font-size="10" font-family="sans-serif">Prince George</text>
+          <circle cx="88" cy="400" r="4" fill="#00868A"/><text x="74" y="416" fill="#4A5568" font-size="9.5" font-family="sans-serif">Victoria</text>
+          <circle cx="65" cy="462" r="5" fill="#0B2540"/><text x="76" y="466" fill="#4A5568" font-size="11" font-family="sans-serif">Alberta</text>
+          <circle cx="165" cy="462" r="5" fill="#00868A"/><text x="176" y="466" fill="#4A5568" font-size="11" font-family="sans-serif">British Columbia</text>
         </svg>
       </div>
       <div class="reveal reveal-d1">
-        <p class="section-lead" style="margin-bottom:2.5rem">Our team delivers civil engineering consulting to clients across major urban centres and resource communities throughout Western Canada.</p>
+        <p class="section-lead" style="margin-bottom:2.5rem">Our team delivers civil engineering consulting to clients across major urban centres and resource communities throughout Western Canada — from highway projects in the Peace Region to stormwater design in Metro Vancouver.</p>
         <div style="margin-bottom:2rem">
           <div class="prov-label">Alberta</div>
           <div class="city-wrap"><span class="city-pill ab">Calgary</span><span class="city-pill ab">Edmonton</span><span class="city-pill ab">Grande Prairie</span><span class="city-pill ab">Red Deer</span><span class="city-pill ab">Fort McMurray</span><span class="city-pill ab">Lethbridge</span></div>
@@ -508,22 +586,19 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
     </div>
   </div>
 </section>
+</div><!-- /home -->
 
-</div><!-- end home -->
-
-<!-- ════════════════════════════════ ABOUT ════════════════════════════════ -->
+<!-- ══════════════ ABOUT ══════════════ -->
 <div id="about" class="page-section">
-  <div style="position:relative;height:480px;overflow:hidden">
-    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1600&q=85" alt="Engineers on site" style="width:100%;height:100%;object-fit:cover;object-position:center 40%">
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,26,46,.9),rgba(0,80,85,.7))"></div>
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 2rem;max-width:1320px;margin:0 auto;left:0;right:0">
-      <div class="section-tag light">About Us</div>
-      <h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2.8rem,6vw,5.5rem);color:#fff;line-height:1;letter-spacing:-.01em">Who We Are</h1>
-    </div>
+  <div class="page-hero">
+    <!-- Site inspection / construction layout -->
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=85" alt="Large civil construction and earthwork operation" style="object-position:center 40%">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><div class="section-tag light">About Us</div><h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2.8rem,6vw,5.5rem);color:#fff;line-height:1">Who We Are</h1></div>
   </div>
   <section style="background:#fff;padding:5rem 2rem">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start" class="about-grid">
+      <div class="about-grid">
         <div>
           <div class="section-tag">Our Mission</div>
           <h2 class="section-title">Engineering With Purpose</h2>
@@ -534,7 +609,8 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
           <div style="margin-top:2.5rem"><a href="#" class="btn-primary" onclick="showSection('contact');return false">Work With Us →</a></div>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=85" alt="Large earthwork construction operation" style="width:100%;border-radius:3px;margin-bottom:1.25rem;display:block" loading="lazy">
+          <!-- Earthwork / grading operation -->
+          <img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=800&q=85" alt="Mass grading earthwork operation with excavator" style="width:100%;border-radius:3px;margin-bottom:1.25rem;display:block" loading="lazy">
           <div style="background:var(--offwhite);border-radius:3px;padding:2.25rem;border:1px solid var(--gray-200)">
             <h3 style="font-family:var(--font-d);font-weight:800;font-size:1.4rem;color:var(--navy);margin-bottom:1.4rem">Why Choose M&amp;Z</h3>
             <ul class="value-list">
@@ -550,46 +626,42 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
   </section>
 </div>
 
-<!-- ════════════════════════════════ SERVICES ════════════════════════════════ -->
+<!-- ══════════════ SERVICES ══════════════ -->
 <div id="services" class="page-section">
-  <div style="position:relative;height:420px;overflow:hidden">
-    <img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?w=1600&q=85" alt="Civil engineering services" style="width:100%;height:100%;object-fit:cover">
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,26,46,.92),rgba(11,37,64,.75))"></div>
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 2rem;max-width:1320px;margin:0 auto;left:0;right:0">
-      <div class="section-tag light">Services</div>
-      <h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2.5rem,5vw,5rem);color:#fff;line-height:1">Engineering Disciplines</h1>
-    </div>
+  <div class="page-hero">
+    <!-- Highway / road construction -->
+    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1600&q=85" alt="Highway transportation engineering and road construction">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><div class="section-tag light">Services</div><h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2.5rem,5vw,5rem);color:#fff;line-height:1">Engineering Disciplines</h1></div>
   </div>
   <section style="background:#fff;padding:5rem 2rem">
     <div class="container">
       <div class="services-grid">
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Feasibility studies" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Planning</div></div><div class="scard-body"><div class="scard-name">Feasibility Studies</div><div class="scard-desc">Site evaluations and preliminary engineering assessments that form the foundation for sound project decisions.</div><ul class="scard-bullets"><li>Site evaluations & constraints analysis</li><li>Preliminary engineering assessment</li><li>Risk assessment & alternatives</li><li>Conceptual cost estimating</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="Detailed engineering design" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Design</div></div><div class="scard-body"><div class="scard-name">Detailed Engineering Design</div><div class="scard-desc">Complete construction drawing packages, technical specifications, and engineering documentation from IFA through IFC.</div><ul class="scard-bullets"><li>IFC / IFA / Tender packages</li><li>Civil design calculations</li><li>Technical specifications</li><li>Construction support</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Site development engineering" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Site Development</div></div><div class="scard-body"><div class="scard-name">Site Development Engineering</div><div class="scard-desc">Full-service site planning and engineering for industrial, commercial, and residential developments.</div><ul class="scard-bullets"><li>Site layout & servicing design</li><li>Utility coordination</li><li>Construction staging plans</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Site grading earthwork" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Earthworks</div></div><div class="scard-body"><div class="scard-name">Site Grading & Earthwork Analysis</div><div class="scard-desc">Precision grading design and earthwork optimization to minimize costs and maximize construction efficiency.</div><ul class="scard-bullets"><li>Existing terrain assessment</li><li>Finished grading design</li><li>Earthwork optimization & mass haul</li><li>Cut & fill volume calculations</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=700&q=80" alt="Stormwater management pond" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Stormwater</div></div><div class="scard-body"><div class="scard-name">Stormwater Engineering</div><div class="scard-desc">Full-spectrum stormwater engineering including hydrologic modeling, SWM pond design, and complete ESC planning.</div><ul class="scard-bullets"><li>Hydrologic & hydraulic modeling</li><li>SWM pond & detention design</li><li>Outlet structure design</li><li>IDF studies & routing analysis</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=700&q=80" alt="Erosion and sediment control" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Environmental</div></div><div class="scard-body"><div class="scard-name">Erosion & Sediment Control</div><div class="scard-desc">Comprehensive ESC planning and design to protect the environment during construction.</div><ul class="scard-bullets"><li>ESC plans & sediment pond design</li><li>Construction-phase drainage controls</li><li>Environmental protection measures</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Tank containment industrial" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Industrial</div></div><div class="scard-body"><div class="scard-name">Tank Containment Systems</div><div class="scard-desc">Industrial secondary containment design and regulatory compliance for energy and industrial facilities.</div><ul class="scard-bullets"><li>Secondary containment systems</li><li>Industrial containment berms</li><li>Spill containment design</li><li>Regulatory compliance reviews</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=700&q=80" alt="Transportation highway engineering" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Transportation</div></div><div class="scard-body"><div class="scard-name">Transportation Engineering</div><div class="scard-desc">Road and highway engineering from access roads to complex interchange and corridor design.</div><ul class="scard-bullets"><li>Industrial & municipal road design</li><li>Highway geometric design</li><li>Intersection & access design</li><li>Traffic accommodation plans</li></ul></div></div>
-        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="Regulatory compliance engineering" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Regulatory</div></div><div class="scard-body"><div class="scard-name">Regulatory Compliance</div><div class="scard-desc">Expert navigation of Alberta and BC provincial and municipal requirements for project approvals.</div><ul class="scard-bullets"><li>Alberta & BC standards</li><li>Municipal approvals coordination</li><li>Environmental requirements</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=80" alt="Civil engineering feasibility site assessment" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Planning</div></div><div class="scard-body"><div class="scard-name">Feasibility Studies</div><div class="scard-desc">Site evaluations and preliminary engineering assessments forming the foundation for sound project decisions across Alberta and BC.</div><ul class="scard-bullets"><li>Site evaluations & constraints analysis</li><li>Preliminary engineering assessment</li><li>Risk assessment & alternatives</li><li>Conceptual cost estimating</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=700&q=80" alt="Detailed engineering design earthwork construction" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Design</div></div><div class="scard-body"><div class="scard-name">Detailed Engineering Design</div><div class="scard-desc">Complete construction drawing packages, technical specifications, and engineering documentation from IFA through IFC.</div><ul class="scard-bullets"><li>IFC / IFA / Tender packages</li><li>Civil design calculations</li><li>Technical specifications</li><li>Construction support services</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="Industrial site development and land development" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Site Development</div></div><div class="scard-body"><div class="scard-name">Site Development Engineering</div><div class="scard-desc">Full-service site planning and civil engineering for industrial, commercial, and residential land developments.</div><ul class="scard-bullets"><li>Site layout & servicing design</li><li>Utility coordination</li><li>Construction staging plans</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=700&q=80" alt="Mass earthwork grading cut fill operation" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Earthworks</div></div><div class="scard-body"><div class="scard-name">Site Grading & Earthwork Analysis</div><div class="scard-desc">Precision grading design and earthwork optimization using mass haul analysis to minimize costs across large industrial and commercial sites.</div><ul class="scard-bullets"><li>Terrain assessment & finished grade design</li><li>Earthwork optimization & mass haul</li><li>Cut & fill volume calculations</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=700&q=80" alt="Stormwater management detention pond outlet structure" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Stormwater</div></div><div class="scard-body"><div class="scard-name">Stormwater Engineering</div><div class="scard-desc">Full-spectrum stormwater engineering — hydrologic modeling, SWM pond design, detention systems, and drainage infrastructure.</div><ul class="scard-bullets"><li>Hydrologic & hydraulic modeling</li><li>SWM pond & detention facility design</li><li>Outlet structures & spillway design</li><li>IDF studies & flood routing analysis</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=80" alt="Erosion and sediment control construction drainage" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Environmental</div></div><div class="scard-body"><div class="scard-name">Erosion & Sediment Control</div><div class="scard-desc">Comprehensive ESC planning and design to protect natural and constructed environments during active construction phases.</div><ul class="scard-bullets"><li>ESC plans & sediment pond design</li><li>Construction-phase drainage controls</li><li>Environmental protection measures</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=700&q=80" alt="Industrial tank farm secondary containment berm" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Industrial</div></div><div class="scard-body"><div class="scard-name">Tank Containment Systems</div><div class="scard-desc">Industrial secondary containment design, containment berm engineering, and spill containment systems for energy and industrial facilities.</div><ul class="scard-bullets"><li>Secondary containment berm design</li><li>Industrial containment systems</li><li>Volume capacity calculations</li><li>AB & BC regulatory compliance</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=700&q=80" alt="Highway road transportation engineering design" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Transportation</div></div><div class="scard-body"><div class="scard-name">Transportation Engineering</div><div class="scard-desc">Road and highway design engineering from industrial access roads to complex highway interchanges, drainage, and corridor development.</div><ul class="scard-bullets"><li>Highway geometric & interchange design</li><li>Industrial & municipal road design</li><li>Intersection & access management</li><li>Culverts, drainage & corridor development</li></ul></div></div>
+        <div class="scard"><div class="scard-img"><img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=700&q=80" alt="Alberta BC regulatory compliance engineering" loading="lazy"><div class="scard-img-overlay"></div><div class="scard-cat">Regulatory</div></div><div class="scard-body"><div class="scard-name">Regulatory Compliance</div><div class="scard-desc">Expert navigation of Alberta and BC provincial and municipal regulatory requirements for efficient project approvals.</div><ul class="scard-bullets"><li>Alberta & BC standards compliance</li><li>Municipal approvals coordination</li><li>Environmental regulatory requirements</li></ul></div></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ════════════════════════════════ PROJECTS ════════════════════════════════ -->
+<!-- ══════════════ PROJECTS ══════════════ -->
 <div id="projects" class="page-section">
-  <div style="position:relative;height:420px;overflow:hidden">
-    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=85" alt="Engineering projects portfolio" style="width:100%;height:100%;object-fit:cover">
-    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(7,26,46,.9),rgba(0,80,85,.65))"></div>
-    <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 2rem;max-width:1320px;margin:0 auto;left:0;right:0">
-      <div class="section-tag light">Portfolio</div>
-      <h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2.5rem,5vw,5rem);color:#fff;line-height:1">Representative Projects</h1>
-    </div>
+  <div class="page-hero">
+    <!-- Aerial earthwork / industrial site -->
+    <img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=1600&q=85" alt="Large scale earthwork and site development project">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><div class="section-tag light">Portfolio</div><h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2.5rem,5vw,5rem);color:#fff;line-height:1">Representative Projects</h1></div>
   </div>
   <section class="projects-section" style="padding-top:4rem">
     <div class="container">
-      <div class="proj-filters" id="projFilters">
+      <div class="proj-filters">
         <button class="pfbtn active" onclick="filterMasonry('all',this,'projMasonry')">All Projects</button>
         <button class="pfbtn" onclick="filterMasonry('site',this,'projMasonry')">Site Development</button>
         <button class="pfbtn" onclick="filterMasonry('stormwater',this,'projMasonry')">Stormwater</button>
@@ -598,32 +670,261 @@ footer{background:var(--navy-dark);border-top:1px solid rgba(0,168,173,.15);padd
         <button class="pfbtn" onclick="filterMasonry('earthworks',this,'projMasonry')">Earthworks</button>
       </div>
       <div class="masonry" id="projMasonry">
-        <div class="masonry-item" data-cat="highway"><img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=600&q=80" alt="Highway design" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Highway Engineering</div><div class="masonry-proj-name">Rural Highway Widening — Geometric Design</div><div class="masonry-proj-loc">📍 Red Deer County, AB</div></div></div>
-        <div class="masonry-item" data-cat="industrial"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Industrial facility" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Industrial Facilities</div><div class="masonry-proj-name">Compressor Station Civil Design</div><div class="masonry-proj-loc">📍 Fort McMurray, AB</div></div></div>
-        <div class="masonry-item" data-cat="stormwater"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=80" alt="Stormwater pond" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Stormwater Management</div><div class="masonry-proj-name">SWM Pond — Commercial Development</div><div class="masonry-proj-loc">📍 Calgary, AB</div></div></div>
-        <div class="masonry-item" data-cat="earthworks"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Earthwork grading" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Earthworks</div><div class="masonry-proj-name">Subdivision Grading & Cut/Fill Optimization</div><div class="masonry-proj-loc">📍 Kelowna, BC</div></div></div>
-        <div class="masonry-item" data-cat="site"><img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?w=600&q=80" alt="Site development" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Site Development</div><div class="masonry-proj-name">Industrial Park — Site Servicing & Grading</div><div class="masonry-proj-loc">📍 Grande Prairie, AB</div></div></div>
-        <div class="masonry-item" data-cat="highway"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Transportation corridor" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Transportation Infrastructure</div><div class="masonry-proj-name">Industrial Access Road — Energy Corridor</div><div class="masonry-proj-loc">📍 Edmonton Region, AB</div></div></div>
-        <div class="masonry-item" data-cat="industrial"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="Engineering site inspection" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Industrial Facilities</div><div class="masonry-proj-name">Meter Station — Civil Site Engineering</div><div class="masonry-proj-loc">📍 Lethbridge, AB</div></div></div>
-        <div class="masonry-item" data-cat="site"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Commercial site development" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Site Development</div><div class="masonry-proj-name">Commercial District — Site Servicing</div><div class="masonry-proj-loc">📍 Surrey, BC</div></div></div>
-        <div class="masonry-item" data-cat="stormwater"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=80" alt="Drainage channel" loading="lazy"><div class="masonry-overlay"><div class="masonry-proj-cat">Stormwater Management</div><div class="masonry-proj-name">Watershed Hydrologic Modeling Study</div><div class="masonry-proj-loc">📍 Kamloops, BC</div></div></div>
+        <div class="masonry-item" data-cat="highway"><img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&q=82" alt="Highway interchange geometric design" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Highway Engineering</div><div class="m-name">Rural Highway Widening — Geometric Design</div><div class="m-loc">📍 Red Deer County, AB</div></div></div>
+        <div class="masonry-item" data-cat="industrial"><img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&q=82" alt="Compressor station energy infrastructure" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Industrial Facilities</div><div class="m-name">Compressor Station Civil Design</div><div class="m-loc">📍 Fort McMurray, AB</div></div></div>
+        <div class="masonry-item" data-cat="stormwater"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=82" alt="Stormwater management detention pond" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Stormwater Management</div><div class="m-name">SWM Pond — Commercial Development</div><div class="m-loc">📍 Calgary, AB</div></div></div>
+        <div class="masonry-item" data-cat="earthworks"><img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=600&q=82" alt="Mass earthwork cut fill grading" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Earthworks</div><div class="m-name">Subdivision Grading & Cut/Fill Optimization</div><div class="m-loc">📍 Kelowna, BC</div></div></div>
+        <div class="masonry-item" data-cat="site"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=82" alt="Industrial park site development servicing" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Site Development</div><div class="m-name">Industrial Park — Site Servicing & Grading</div><div class="m-loc">📍 Grande Prairie, AB</div></div></div>
+        <div class="masonry-item" data-cat="highway"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=82" alt="Industrial access road energy corridor" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Transportation Infrastructure</div><div class="m-name">Industrial Access Road — Energy Corridor</div><div class="m-loc">📍 Edmonton Region, AB</div></div></div>
+        <div class="masonry-item" data-cat="industrial"><img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&q=82" alt="Meter station industrial civil site engineering" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Industrial Facilities</div><div class="m-name">Meter Station — Civil Site Engineering</div><div class="m-loc">📍 Lethbridge, AB</div></div></div>
+        <div class="masonry-item" data-cat="site"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=82" alt="Commercial site development servicing Surrey BC" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Site Development</div><div class="m-name">Commercial District — Site Servicing</div><div class="m-loc">📍 Surrey, BC</div></div></div>
+        <div class="masonry-item" data-cat="stormwater"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=82" alt="Watershed hydrologic modeling drainage" loading="lazy"><div class="masonry-overlay"><div class="m-cat">Stormwater Management</div><div class="m-name">Watershed Hydrologic Modeling Study</div><div class="m-loc">📍 Kamloops, BC</div></div></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ════════════════════════════════ INDUSTRIES ════════════════════════════════ -->
+<!-- ══════════════ INDUSTRIES ══════════════ -->
 <div id="industries" class="page-section">
   <section class="industries-section" style="padding-top:8rem">
     <div class="container">
       <div class="section-tag light">Industries Served</div>
       <h1 class="section-title white" style="font-size:clamp(2.5rem,5vw,4.5rem);margin-bottom:.8rem">Sectors We Serve</h1>
-      <p class="section-lead white" style="margin-bottom:3.5rem">Deep experience across Western Canada's major economic sectors — from energy infrastructure to municipal development.</p>
+      <p class="section-lead white" style="margin-bottom:3.5rem">Deep civil engineering experience across Western Canada's major economic sectors — from energy infrastructure to municipal development.</p>
       <div class="ind-grid">
-        <div class="ind-card"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Energy and industrial" loading="lazy"><div class="ind-overlay"><div class="ind-name">Energy & Industrial</div><div class="ind-desc">Oil & Gas · LNG · Compressor Stations · Industrial Plants</div></div></div>
-        <div class="ind-card"><img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?w=600&q=80" alt="Municipal infrastructure" loading="lazy"><div class="ind-overlay"><div class="ind-name">Municipal Infrastructure</div><div class="ind-desc">Roads · Utilities · Stormwater Systems</div></div></div>
-        <div class="ind-card"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=80" alt="Land development" loading="lazy"><div class="ind-overlay"><div class="ind-name">Land Development</div><div class="ind-desc">Commercial · Industrial Parks · Subdivisions</div></div></div>
-        <div class="ind-card"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Transportation" loading="lazy"><div class="ind-overlay"><div class="ind-name">Transportation</div><div class="ind-desc">Highways · Access Roads · Corridors</div></div></div>
-        <div class="ind-card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Oil and gas" loading="lazy"><div class="ind-overlay"><div class="ind-name">Oil & Gas</div><div class="ind-desc">Pipeline Corridors · Tank Farms · Facility Pads</div></div></div>
-        <div class="ind-card"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=80" alt="Environmental" loading="lazy"><div class="ind-overlay"><div class="ind-name">Environmental</div><div class="ind-desc">Stormwater · Erosion Control · Remediation</div></div></div>
-        <d
+        <!-- Energy/industrial: compressor, LNG -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&q=80" alt="Oil gas LNG industrial energy infrastructure" loading="lazy"><div class="ind-overlay"><div class="ind-name">Energy & Industrial</div><div class="ind-desc">Oil & Gas · LNG Facilities · Compressor Stations · Meter Stations · Industrial Plants</div></div></div>
+        <!-- Highway/transportation -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=600&q=80" alt="Municipal highway road infrastructure" loading="lazy"><div class="ind-overlay"><div class="ind-name">Municipal Infrastructure</div><div class="ind-desc">Roads · Utilities · Stormwater Systems · Municipal Facilities</div></div></div>
+        <!-- Earthworks/site development -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Land development industrial park commercial" loading="lazy"><div class="ind-overlay"><div class="ind-name">Land Development</div><div class="ind-desc">Commercial · Industrial Parks · Subdivisions · Mixed-Use</div></div></div>
+        <!-- Roads/transportation -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80" alt="Transportation highway access road corridor" loading="lazy"><div class="ind-overlay"><div class="ind-name">Transportation</div><div class="ind-desc">Highways · Access Roads · Transportation Corridors · Bridges</div></div></div>
+        <!-- Tank farm / oil gas -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&q=80" alt="Oil gas pipeline tank farm energy facility" loading="lazy"><div class="ind-overlay"><div class="ind-name">Oil & Gas</div><div class="ind-desc">Pipeline Corridors · Tank Farms · Facility Pads · Processing Plants</div></div></div>
+        <!-- Stormwater/environmental -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1590650046871-92c887180603?w=600&q=80" alt="Environmental stormwater erosion control" loading="lazy"><div class="ind-overlay"><div class="ind-name">Environmental</div><div class="ind-desc">Stormwater Management · Erosion Control · ESC · Remediation Sites</div></div></div>
+        <!-- Mass grading / earthworks -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=600&q=80" alt="Commercial industrial earthwork site preparation" loading="lazy"><div class="ind-overlay"><div class="ind-name">Commercial Development</div><div class="ind-desc">Retail Centres · Office Parks · Distribution Centres · Mixed-Use</div></div></div>
+        <!-- Clean energy / LNG -->
+        <div class="ind-card"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80" alt="LNG clean energy infrastructure civil design" loading="lazy"><div class="ind-overlay"><div class="ind-name">LNG & Clean Energy</div><div class="ind-desc">LNG Facilities · Compressor Stations · Clean Energy Infrastructure</div></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════ CAREERS ══════════════ -->
+<div id="careers" class="page-section">
+  <div class="page-hero">
+    <!-- Construction / engineering site work -->
+    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600&q=85" alt="Civil engineering construction site careers" style="object-position:center 60%">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><div class="section-tag light">Careers</div><h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2.5rem,5vw,5rem);color:#fff;line-height:1">Build Your Career<br>With M&amp;Z</h1></div>
+  </div>
+  <section class="careers-section" style="padding-top:5rem">
+    <div class="container">
+      <div class="careers-inner">
+        <div>
+          <p style="font-size:15px;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:2rem">Join a team of experienced civil engineering professionals working on meaningful infrastructure projects across Western Canada. We offer a collaborative environment, growth opportunities, and work that makes a real difference in the communities we serve.</p>
+          <div class="why-grid">
+            <div class="why-card"><div class="why-icon">⚡</div><div class="why-title">Career Growth</div><div class="why-desc">Advance with challenging infrastructure projects and mentorship from senior engineers.</div></div>
+            <div class="why-card"><div class="why-icon">🤝</div><div class="why-title">Collaborative Culture</div><div class="why-desc">Work alongside skilled professionals in a supportive team environment.</div></div>
+            <div class="why-card"><div class="why-icon">🌎</div><div class="why-title">Diverse Projects</div><div class="why-desc">Industrial, municipal, highway, and land development across AB and BC.</div></div>
+            <div class="why-card"><div class="why-icon">📐</div><div class="why-title">Technical Excellence</div><div class="why-desc">Apply leading civil engineering practices to impactful real-world projects.</div></div>
+          </div>
+          <div style="margin-top:2.5rem">
+            <h3 style="font-family:var(--font-d);font-weight:800;font-size:1.3rem;color:#fff;margin-bottom:1.2rem">Current Openings</h3>
+            <div class="opening"><div><div class="opening-title">Civil Engineer — Site Development</div><div class="opening-meta">Calgary, AB · Full-Time · P.Eng. Required</div></div><div class="opening-arr">→</div></div>
+            <div class="opening"><div><div class="opening-title">Civil Engineer — Transportation</div><div class="opening-meta">Edmonton, AB · Full-Time · P.Eng. Required</div></div><div class="opening-arr">→</div></div>
+            <div class="opening"><div><div class="opening-title">Engineering Technologist — Grading & Drainage</div><div class="opening-meta">Calgary, AB / Vancouver, BC · Full-Time</div></div><div class="opening-arr">→</div></div>
+            <div class="opening"><div><div class="opening-title">Junior Civil Engineer (EIT)</div><div class="opening-meta">Multiple Locations · New Grads Welcome</div></div><div class="opening-arr">→</div></div>
+          </div>
+        </div>
+        <div class="form-wrap">
+          <h3 style="font-family:var(--font-d);font-weight:800;font-size:1.4rem;color:#fff;margin-bottom:.5rem">Submit Your Resume</h3>
+          <p style="font-size:13px;color:rgba(255,255,255,.45);margin-bottom:1.5rem;line-height:1.65">Don't see your role listed? We're always interested in talented civil engineering professionals.</p>
+          <div class="form-row">
+            <div class="form-group"><label class="flabel">First Name</label><input type="text" class="finput" placeholder="Jane"></div>
+            <div class="form-group"><label class="flabel">Last Name</label><input type="text" class="finput" placeholder="Smith"></div>
+          </div>
+          <div class="form-group"><label class="flabel">Email</label><input type="email" class="finput" placeholder="jane@example.com"></div>
+          <div class="form-group"><label class="flabel">Phone</label><input type="tel" class="finput" placeholder="+1 (780) 000-0000"></div>
+          <div class="form-group"><label class="flabel">Position of Interest</label><select class="finput"><option value="">Select...</option><option>Civil Engineer — Site Development</option><option>Civil Engineer — Transportation</option><option>Civil Engineer — Stormwater</option><option>Engineering Technologist</option><option>Junior Engineer / EIT</option><option>General Application</option></select></div>
+          <div class="form-group"><label class="flabel">Message</label><textarea class="finput" rows="4" placeholder="Tell us about your experience and background..."></textarea></div>
+          <button class="btn-primary" style="width:100%;justify-content:center" onclick="submitForm(this)">Submit Application →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<div id="contact" class="page-section">
+  <div class="page-hero">
+    <!-- Highway / infrastructure project -->
+    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1600&q=85" alt="Civil engineering transportation infrastructure project">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content"><div class="section-tag light">Contact</div><h1 style="font-family:var(--font-d);font-weight:900;font-size:clamp(2rem,4vw,4rem);color:#fff;line-height:1.05">Discuss Your Project With<br>Our Engineering Team</h1></div>
+  </div>
+  <section class="contact-section" style="padding-top:5rem">
+    <div class="container">
+      <div class="contact-inner">
+        <div>
+          <p style="font-size:15px;color:var(--gray-600);line-height:1.82;margin-bottom:2.5rem">Whether you're in early project planning or need detailed engineering design, our team is ready to help. Reach out to discuss your civil engineering requirements across Alberta and British Columbia.</p>
+          <div><div class="contact-info-label">Service Areas</div><div class="contact-info-val"><strong style="color:var(--navy)">Alberta & British Columbia</strong></div></div>
+          <div><div class="contact-info-label">Engineering Disciplines</div><div class="contact-info-val">Site Development · Stormwater · Transportation<br>Earthworks · Industrial Civil · Regulatory Compliance</div></div>
+          <div><div class="contact-info-label">Business Hours</div><div class="contact-info-val">Monday – Friday: 8:00 AM – 5:00 PM MST</div></div>
+          <div style="margin-top:2rem;padding:1.5rem;background:var(--teal-pale);border-radius:3px;border-left:4px solid var(--teal)">
+            <p style="font-size:13.5px;color:var(--teal);font-weight:700;margin-bottom:.3rem">Ready to Get Started?</p>
+            <p style="font-size:13.5px;color:var(--gray-600);line-height:1.7">Submit your project details and a member of our engineering team will respond within one business day.</p>
+          </div>
+          <!-- Earthwork / site construction photo in sidebar -->
+          <div style="margin-top:2rem">
+            <img src="https://images.unsplash.com/photo-1627651914916-2fd1a91c24f8?w=600&q=80" alt="Earthwork and site grading construction operation" style="width:100%;border-radius:3px;display:block" loading="lazy">
+          </div>
+        </div>
+        <div class="cform">
+          <h3 style="font-family:var(--font-d);font-weight:900;font-size:1.6rem;color:var(--navy);margin-bottom:1.75rem">Project Inquiry</h3>
+          <div class="form-row">
+            <div class="form-group"><label class="flabel dk">Full Name *</label><input type="text" class="finput dk" placeholder="Jane Smith"></div>
+            <div class="form-group"><label class="flabel dk">Company</label><input type="text" class="finput dk" placeholder="Your Company Ltd."></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="flabel dk">Email *</label><input type="email" class="finput dk" placeholder="jane@company.com"></div>
+            <div class="form-group"><label class="flabel dk">Phone</label><input type="tel" class="finput dk" placeholder="+1 (780) 000-0000"></div>
+          </div>
+          <div class="form-group"><label class="flabel dk">Service Required</label><select class="finput dk"><option value="">Select a service...</option><option>Feasibility Study</option><option>Site Development Engineering</option><option>Site Grading & Earthwork</option><option>Stormwater Engineering</option><option>Transportation Engineering</option><option>Tank Containment Design</option><option>Detailed Engineering Design</option><option>Regulatory Compliance Review</option><option>Multiple Services</option><option>Other / Not Sure</option></select></div>
+          <div class="form-group"><label class="flabel dk">Project Location</label><input type="text" class="finput dk" placeholder="e.g. Calgary, AB or Red Deer County"></div>
+          <div class="form-group"><label class="flabel dk">Project Description *</label><textarea class="finput dk" rows="5" placeholder="Describe your project, timeline, and engineering requirements..."></textarea></div>
+          <button class="btn-primary" style="width:100%;justify-content:center;padding:1rem 2rem;font-size:15px" onclick="submitForm(this)">Send Project Inquiry →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#" onclick="showSection('home');return false" style="display:inline-flex;margin-bottom:.25rem">
+          <div class="logo-mark">M&Z</div>
+          <div class="logo-text"><span class="logo-main">M&amp;Z Design Consulting</span><span class="logo-sub">Civil Engineering Consultants · LTD.</span></div>
+        </a>
+        <p>Civil engineering consulting across Alberta and British Columbia — delivering practical, innovative, and cost-effective solutions for infrastructure, industrial, and land development projects.</p>
+        <div style="margin-top:1.5rem"><a class="social-link" href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+      </div>
+      <div><div class="fcol-title">Quick Links</div><ul class="flinks"><li><a href="#" onclick="showSection('home');return false">Home</a></li><li><a href="#" onclick="showSection('about');return false">About Us</a></li><li><a href="#" onclick="showSection('services');return false">Services</a></li><li><a href="#" onclick="showSection('projects');return false">Projects</a></li><li><a href="#" onclick="showSection('industries');return false">Industries</a></li><li><a href="#" onclick="showSection('careers');return false">Careers</a></li><li><a href="#" onclick="showSection('contact');return false">Contact</a></li></ul></div>
+      <div><div class="fcol-title">Services</div><ul class="flinks"><li><a href="#" onclick="showSection('services');return false">Site Development</a></li><li><a href="#" onclick="showSection('services');return false">Stormwater Engineering</a></li><li><a href="#" onclick="showSection('services');return false">Transportation Engineering</a></li><li><a href="#" onclick="showSection('services');return false">Site Grading & Earthwork</a></li><li><a href="#" onclick="showSection('services');return false">Tank Containment</a></li><li><a href="#" onclick="showSection('services');return false">Feasibility Studies</a></li><li><a href="#" onclick="showSection('services');return false">Regulatory Compliance</a></li></ul></div>
+      <div><div class="fcol-title">Service Areas</div><ul class="flinks"><li><a href="#">Calgary, AB</a></li><li><a href="#">Edmonton, AB</a></li><li><a href="#">Grande Prairie, AB</a></li><li><a href="#">Fort McMurray, AB</a></li><li><a href="#">Vancouver, BC</a></li><li><a href="#">Kelowna, BC</a></li><li><a href="#">Prince George, BC</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 M&amp;Z Design Consulting LTD. All rights reserved.</div>
+      <div class="footer-tagline">Engineering Practical Solutions for Sustainable Infrastructure.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// NAVIGATION
+function showSection(id){
+  document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  const l=document.getElementById('nav-'+id);if(l)l.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  updateNav();
+  if(id==='home')setTimeout(initCounters,400);
+}
+
+// NAV SCROLL
+function updateNav(){
+  const nav=document.getElementById('mainNav');
+  const isHome=document.getElementById('home').classList.contains('active');
+  if(window.scrollY>80||!isHome){nav.classList.add('scrolled');nav.classList.remove('top')}
+  else{nav.classList.remove('scrolled');nav.classList.add('top')}
+}
+window.addEventListener('scroll',updateNav);
+
+// MOBILE MENU
+function toggleMobile(){
+  const nl=document.getElementById('navLinks');
+  const open=nl.style.display==='flex'&&nl.style.position==='absolute';
+  if(open){nl.removeAttribute('style')}
+  else{nl.style.cssText='display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:rgba(7,26,46,.98);padding:1rem 2rem;gap:.2rem;border-bottom:1px solid rgba(0,168,173,.2);z-index:999'}
+}
+
+// HERO SLIDESHOW
+const slides=document.querySelectorAll('.hero-slide');
+const indContainer=document.getElementById('slideIndicators');
+let current=0,timer;
+slides.forEach((_,i)=>{
+  const b=document.createElement('button');
+  b.className='hero-dot'+(i===0?' active':'');
+  b.setAttribute('aria-label','Slide '+(i+1));
+  b.onclick=()=>goSlide(i);
+  indContainer.appendChild(b);
+});
+function goSlide(n){
+  slides[current].classList.remove('active');
+  document.querySelectorAll('.hero-dot')[current].classList.remove('active');
+  current=n;
+  slides[current].classList.add('active');
+  document.querySelectorAll('.hero-dot')[current].classList.add('active');
+  clearInterval(timer);
+  timer=setInterval(()=>goSlide((current+1)%slides.length),5500);
+}
+timer=setInterval(()=>goSlide((current+1)%slides.length),5500);
+
+// MARQUEE
+const items=['Site Grading & Earthwork','Stormwater Management','Highway Design','Transportation Engineering','Industrial Site Development','Hydrologic Modeling','Tank Containment Systems','Erosion & Sediment Control','Feasibility Studies','Regulatory Compliance','Cut & Fill Balancing','Mass Haul Planning'];
+const track=document.getElementById('marqueeTrack');
+[...items,...items].forEach(t=>{const s=document.createElement('span');s.className='marquee-item';s.textContent=t;track.appendChild(s);});
+
+// COUNTERS
+function animateCounter(el){
+  const target=parseInt(el.dataset.count)||0;
+  const suffix=el.dataset.suffix||'';
+  if(!target)return;
+  let start=null;const dur=2000;
+  (function step(ts){
+    if(!start)start=ts;
+    const p=Math.min((ts-start)/dur,1);
+    const e=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(e*target)+suffix;
+    if(p<1)requestAnimationFrame(step);
+    else el.textContent=target+suffix;
+  })(performance.now());
+}
+function initCounters(){document.querySelectorAll('[data-count]').forEach(animateCounter);}
+initCounters();
+
+// SCROLL REVEAL + stats trigger
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+const sb=document.querySelector('.stats-band');
+if(sb){const sr=new IntersectionObserver(e=>{if(e[0].isIntersecting){e[0].target.querySelectorAll('[data-count]').forEach(animateCounter);sr.disconnect();}},{threshold:.3});sr.observe(sb);}
+
+// MASONRY FILTER
+function filterMasonry(cat,btn,gridId){
+  btn.closest('div').querySelectorAll('.pfbtn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(gridId).querySelectorAll('.masonry-item').forEach(item=>{
+    item.style.display=(cat==='all'||item.dataset.cat===cat)?'block':'none';
+  });
+}
+
+// FORM
+function submitForm(btn){
+  const orig=btn.innerHTML;
+  btn.innerHTML='✓ Submitted — We\'ll be in touch!';
+  btn.style.background='#0F6E56';btn.style.borderColor='#0F6E56';btn.disabled=true;
+  setTimeout(()=>{btn.innerHTML=orig;btn.style.background='';btn.style.borderColor='';btn.disabled=false;},4000);
+}
+
+// INIT
+document.getElementById('mainNav').classList.add('top');
+</script>
+</body>
+</html>
